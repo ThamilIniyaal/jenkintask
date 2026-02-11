@@ -12,15 +12,15 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Building project..."
-                sh 'ls -l'
+                echo "Listing files..."
+                bat 'dir'
             }
         }
 
         stage('Test') {
             steps {
-                echo "Testing HTML file..."
-                sh 'cat index.html'
+                echo "Displaying HTML file..."
+                bat 'type index.html'
             }
         }
 
